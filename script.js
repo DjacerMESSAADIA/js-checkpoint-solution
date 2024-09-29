@@ -64,15 +64,10 @@ function filterArray(array, condition) {
   return `filted array: ${filteredArray}`;
 }
 function factorial(n) {
-  function calculateFactorial(num) {
-    if (num === 0 || num === 1) {
-      return 1;
-    } else {
-      return num * calculateFactorial(num - 1);
-    }
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
   }
-
-  const result = calculateFactorial(n);
   return `factorial of ${n} is ${result}`;
 }
 function isPrime(num) {
